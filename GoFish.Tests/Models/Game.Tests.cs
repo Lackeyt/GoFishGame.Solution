@@ -28,11 +28,13 @@ namespace GoFish.Tests
       Game testGame = new Game();
       Player player1 = new Player();
       Player player2 = new Player();
-      testGame.PlayerList.Add(player1);
-      testGame.PlayerList.Add(player2);
+      testGame.AddPlayer(player1);
+      testGame.AddPlayer(player2);
       List<Player> testList = new List<Player>{};
+      testList.Add(player1);
+      testList.Add(player2);
 
-      CollectionAssert.AreEqual(testList, testGame.PlayerList);
+      CollectionAssert.AreEqual(testList, testGame.GetPlayerList());
 
     }
 

@@ -6,6 +6,7 @@ namespace GoFish.Models
   {
     public int TurnCount { get; set; }
     private List<string[]> _deck = new List<string[]> {};
+    private List<Player> _players = new List<Player> {};
 
     public Game()
     {
@@ -28,6 +29,16 @@ namespace GoFish.Models
           _deck.Add(temp);
         }
       }
+    }
+
+    public void AddPlayer(Player player)
+    {
+      _players.Add(player);
+    }
+
+    public List<Player> GetPlayerList()
+    {
+      return _players;
     }
 
     public List<string[]> GetDeck()
