@@ -78,6 +78,8 @@ namespace GoFish.Tests
       Assert.AreEqual(true, testGame.CheckForMatch("3"));
     }
 
+    [TestMethod]
+
 
   }
 }

@@ -72,15 +72,63 @@ namespace GoFish.Models
         if(guess == card[0])
         {
           isMatch = true;
+          TakeMatchedCard(guess, card);
           break;
         }
+      }
+      if (isMatch == false) {
+        DrawCard(CurrentPlayerTurn, 1);
+        CurrentPlayerTurn = notCurrentPlayer;
       }
       return isMatch;
     }
 
-    // public void TakeMatchedCard()
-    // {
-    //   if()
-    // }
+    public void TakeMatchedCard(string guess, string[] card)
+    {
+      int notCurrentPlayer = Math.Abs(CurrentPlayerTurn - 1);
+      _players[CurrentPlayerTurn].PlayerHand.Add(card);
+      _players[notCurrentPlayer].PlayerHand.Remove(card);
+    }
+
+    public bool IsGameOver()
+    {
+      foreach (Player player in _players)
+      {
+        if(player.PlayerHand.Count ==0)
+        {
+          return true;
+        }
+      }
+      return false;
+    }
+
+    public void RemoveDuplicatesAddScore()
+    {
+      bool DuplicatesFlag = false;
+      do 
+      {
+        DuplicatesFlag = false;
+        for (int i = 0; i < _players[CurrentPlayerTurn].PlayerHand.Count -1; i++)
+        {
+          string[] card1 = _players[CurrentPlayerTurn].PlayerHand[i];
+          for(int j = i+1; j <_players[CurrentPlayerTurn].PlayerHand.Count; j++)
+          {
+            string[] card2 = _players[CurrentPlayerTurn].PlayerHand[j];
+            if ( card1[0] = card2[0])
+            {
+              _players[CurrentPlayerTurn].PlayerHand.Remove(Card1);
+              _players[CurrentPlayerTurn].PlayerHand.Remove(Card2);
+              _players[CurrentPlayerTurn].Score += 1;
+              DuplicatesFlag = true;
+            }
+          }
+        }
+      } while (DuplicatesFlag == true);
+    }
+
+
   }
 }
+
+
+// create game -> create players -> player 1 turn (UI choose card) -> CheckForMatch() -> player 2 turn <game end check> <score iteration / remove duplicates from hand>
