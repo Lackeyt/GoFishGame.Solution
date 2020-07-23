@@ -27,7 +27,7 @@ _Long description._
 
 |X.| The player object is dealt a hand of 5 cards upon instantiation | | | _False_|
 
-|12.|The player object is able to draw a card and add it to their hand  |  |  |_False_  |
+|12.|The game object is able to cards and add it to a players hand  |  |  |_True_  |
 |13.| The player object will continue play if no cards are left in the deck| | | _False|
 |14.|The player object can identify matches within it's own hand and remove them |  |  |_False_  |
 |15.| The player object, after identifying a match, will increment its score  |  |  |_False_  |

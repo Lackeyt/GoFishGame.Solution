@@ -53,6 +53,16 @@ namespace GoFish.Tests
 
       Assert.AreEqual(5, player1.PlayerHand.Count);
     }
+    
+    [TestMethod]
+    public void DrawCard_ReducesTotalDeckCount_Int()
+    {
+      Game testGame = new Game();
+      Player player1 = new Player();
+      testGame.AddPlayer(player1);
+
+      Assert.AreEqual(47, testGame.GetDeck().Count);
+    }
 
 
   }
