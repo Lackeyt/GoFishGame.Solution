@@ -7,11 +7,13 @@ namespace GoFish.Models
     public int TurnCount { get; set; }
     private List<string[]> _deck = new List<string[]> {};
     private List<Player> _players = new List<Player> {};
+    public int CurrentPlayerTurn { get; set; }
 
     public Game()
     {
       TurnCount = 1;
       this.PopulateDeck();
+      CurrentPlayerTurn = 1;
     }
 
     private void PopulateDeck()

@@ -35,8 +35,13 @@ namespace GoFish.Tests
       testList.Add(player2);
 
       CollectionAssert.AreEqual(testList, testGame.GetPlayerList());
-
     }
 
+    [TestMethod]
+    public void GamePlayerTurnTracker_IndexValueForCurrentPlayerTurn_PlayerTurnIndex()
+    {
+      Game testGame = new Game();
+      Assert.AreEqual(1, testGame.CurrentPlayerTurn);
+    }
   }
 }
