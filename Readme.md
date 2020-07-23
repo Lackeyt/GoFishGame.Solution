@@ -11,7 +11,8 @@ _Long description._
 ### Specifications
 | | Spec | Input | Output | isComplete |
 | :-------------     | :-------------     | :------------- | :------------- |:------------- |
-|1.|The program can instantiate a Game object  |  |  | _False_ |
+|1.|The program can instantiate a Game object  |  |  | _True_ |
+
 |2.|The Game object contains a turn count number |Turn Number: |7 |_False_  |
 |3.|The game object contains a deck of standard 52 cards |  |  |_False_  |
 |4.|The game object contains a dictionary of player objects |  |  |_False_  |
