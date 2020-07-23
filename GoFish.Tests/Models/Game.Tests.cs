@@ -79,7 +79,19 @@ namespace GoFish.Tests
     }
 
     [TestMethod]
-
-
+    public void RemoveDuplicatesAddScore_RemovesDuplicateCardValuesFromHandAndAddsScore_0()
+    {
+      Game testGame = new Game();
+      Player player1 = new Player();
+      testGame.AddPlayer(player1);
+      player1.PlayerHand.Clear();
+      string[] testCard = {"3", "hearts"};
+      string[] testCard2 = {"3", "diamonds"};
+      player1.PlayerHand.Add(testCard);
+      player1.PlayerHand.Add(testCard2);
+      testGame.RemoveDuplicatesAddScore();
+      Assert.AreEqual(0, player1.PlayerHand.Count);
+    }
+    
   }
 }

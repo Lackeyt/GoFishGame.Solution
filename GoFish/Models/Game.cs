@@ -114,10 +114,10 @@ namespace GoFish.Models
           for(int j = i+1; j <_players[CurrentPlayerTurn].PlayerHand.Count; j++)
           {
             string[] card2 = _players[CurrentPlayerTurn].PlayerHand[j];
-            if ( card1[0] = card2[0])
+            if ( card1[0] == card2[0])
             {
-              _players[CurrentPlayerTurn].PlayerHand.Remove(Card1);
-              _players[CurrentPlayerTurn].PlayerHand.Remove(Card2);
+              _players[CurrentPlayerTurn].PlayerHand.Remove(card1);
+              _players[CurrentPlayerTurn].PlayerHand.Remove(card2);
               _players[CurrentPlayerTurn].Score += 1;
               DuplicatesFlag = true;
             }
