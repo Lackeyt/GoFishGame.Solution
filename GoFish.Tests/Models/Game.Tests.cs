@@ -41,7 +41,7 @@ namespace GoFish.Tests
     public void GamePlayerTurnTracker_IndexValueForCurrentPlayerTurn_PlayerTurnIndex()
     {
       Game testGame = new Game();
-      Assert.AreEqual(1, testGame.CurrentPlayerTurn);
+      Assert.AreEqual(0, testGame.CurrentPlayerTurn);
     }
 
     [TestMethod]
@@ -62,6 +62,20 @@ namespace GoFish.Tests
       testGame.AddPlayer(player1);
 
       Assert.AreEqual(47, testGame.GetDeck().Count);
+    }
+
+    [TestMethod]
+    public void CheckForMatch_ReturnsTrueIfMatchFoundInOpponentHand_True()
+    {
+      Game testGame = new Game();
+      Player player1 = new Player();
+      Player player2 = new Player();
+      testGame.AddPlayer(player1);
+      testGame.AddPlayer(player2);
+      string[] testCard = {"3", "hearts"};
+      player2.PlayerHand.Add(testCard);
+      
+      Assert.AreEqual(true, testGame.CheckForMatch("3"));
     }
 
 

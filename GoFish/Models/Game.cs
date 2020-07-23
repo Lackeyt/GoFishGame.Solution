@@ -14,12 +14,12 @@ namespace GoFish.Models
     {
       TurnCount = 1;
       PopulateDeck();
-      CurrentPlayerTurn = 1;
+      CurrentPlayerTurn = 0;
     }
 
     private void PopulateDeck()
     {
-      string[] values = {"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
+      string[] values = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
       string[] suites = {"Spades", "Clubs", "Diamonds", "Hearts"};
       string[] temp = {"", ""};
 
@@ -45,7 +45,7 @@ namespace GoFish.Models
       for (int i = numOfCards; i > 0; i--)
       {
         Random something = new Random();
-        int deckLocation = something.Next(_deck.Count) -1;
+        int deckLocation = something.Next(_deck.Count);
         string[] drawnCard = _deck[deckLocation];
         _players[playerIndex].PlayerHand.Add(drawnCard);
         _deck.RemoveAt(deckLocation);
@@ -61,5 +61,26 @@ namespace GoFish.Models
     {
       return _deck;
     }
+
+    public bool CheckForMatch(string guess)
+    {
+      bool isMatch = false;
+      int notCurrentPlayer = Math.Abs(CurrentPlayerTurn - 1);
+      for (int i=0; i < _players[notCurrentPlayer].PlayerHand.Count; i++)
+      {
+        string[] card = _players[notCurrentPlayer].PlayerHand[i];
+        if(guess == card[0])
+        {
+          isMatch = true;
+          break;
+        }
+      }
+      return isMatch;
+    }
+
+    // public void TakeMatchedCard()
+    // {
+    //   if()
+    // }
   }
 }
