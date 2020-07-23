@@ -12,9 +12,9 @@ _Long description._
 | | Spec | Input | Output | isComplete |
 | :-------------     | :-------------     | :------------- | :------------- |:------------- |
 |1.|The program can instantiate a Game object  |  |  | _True_ |
+|2.|The Game object contains a turn count number |Turn Number: |7 |_True_  |
+|3.|The game object contains a deck of standard 52 cards |  |  |_True_  |
 
-|2.|The Game object contains a turn count number |Turn Number: |7 |_False_  |
-|3.|The game object contains a deck of standard 52 cards |  |  |_False_  |
 |4.|The game object contains a dictionary of player objects |  |  |_False_  |
 |5.|The game object checks if selected card value exists in opponent's hand  |  |  |_False_  |
 |6|If selected card value exists in opponent's hand, remove that card from oppenent hand and add it to player's|||_False_|
