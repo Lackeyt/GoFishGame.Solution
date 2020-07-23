@@ -10,9 +10,10 @@ namespace GoFish.Models
     public Game()
     {
       TurnCount = 1;
+      this.PopulateDeck();
     }
 
-    public void PopulateDeck()
+    private void PopulateDeck()
     {
       string[] values = {"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
       string[] suites = {"Spades", "Clubs", "Diamonds", "Hearts"};
