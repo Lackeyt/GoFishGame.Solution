@@ -1,8 +1,8 @@
-# _PROJECT NAME_
+# _Go Fish_
 
-#### _SHORT DESCRIPTION_
+#### _A recreation of the classic childrens game Go Fish using the MVC structure_
 
-#### By _**Ian Scott**_
+#### By _**Ian Scott and Tyson Lackey**_
 
 ## Description
 
@@ -30,19 +30,20 @@ _Long description._
 
 ## Known Bugs
 
-_ _
+_There are currently no known bugs_
 
 ## Support and contact details
 
-_Contact me at...._
+_Contact the authors via their respective GitHub profile pages._
 
 ## Technologies Used
 
 - C#
 - .NET
+- MVC
 
 ### License
 
 _This software is licensed under the MIT license_
 
-Copyright (c) 2020 **Ian Scott**.
+Copyright (c) 2020 **Ian Scott and Tyson Lackey**.
