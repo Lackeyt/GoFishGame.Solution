@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using ProjectName.Models;
+using GoFish.Models;
 
-namespace ProjectName.Controllers
+namespace GoFish.Controllers
 {
   public class HomeController : Controller
   {
