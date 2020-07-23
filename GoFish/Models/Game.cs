@@ -36,6 +36,7 @@ namespace GoFish.Models
     public void AddPlayer(Player player)
     {
       _players.Add(player);
+      // Logic for removing 5 cards from the deck and adding to players hand
     }
 
     public List<Player> GetPlayerList()

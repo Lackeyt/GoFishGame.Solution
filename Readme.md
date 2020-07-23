@@ -20,8 +20,8 @@ _Long description._
 |6|If selected card value exists in opponent's hand, remove that card from oppenent hand and add it to player's|||_False_|
 |7|If selected card value does not exist in opponent's hand, draw a card from game deck and add to player's hand, player turn ends|||_False_|
 
-|8.|The game object has a index value to know whose turn it is  |  |  |_False_  |
-|9.|The program can instantiate a Player object  |  |  |_False_  |
+|8.|The game object has a index value to know whose turn it is  |  |  |_True_  |
+|9.|The program can instantiate a Player object  |  |  |_True_  |
 |10.|The player object contains a list of cards in hand  |  |  |_False_  |
 |11.|The player object tracks the players score  |  |  |_False_  |
 |12.|The player object is able to draw a card and add it to their hand  |  |  |_False_  |
