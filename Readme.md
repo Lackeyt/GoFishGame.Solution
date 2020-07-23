@@ -22,7 +22,8 @@ _Long description._
 
 |8.|The game object has a index value to know whose turn it is  |  |  |_True_  |
 |9.|The program can instantiate a Player object  |  |  |_True_  |
-|10.|The player object contains a list of cards in hand  |  |  |_False_  |
+|10.|The player object contains a list of cards in hand  |  |  |_True_  |
+
 |11.|The player object tracks the players score  |  |  |_False_  |
 |12.|The player object is able to draw a card and add it to their hand  |  |  |_False_  |
 |13.| The player object will continue play if no cards are left in the deck| | | _False|

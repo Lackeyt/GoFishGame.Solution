@@ -13,12 +13,12 @@ namespace GoFish.Tests
     public void PlayerConstructor_PlayerObjectContainsListOfCardsInHand_2()
     {
       Player testPlayer = new Player();
-      List<string[]> result = new List<string[]> {};
+      //List<string[]> result = new List<string[]> {};
       string[] test = {"test", "test"};
       string[] test2 = {"test2", "test2"};
-      result.Add(test);
-      result.Add(test2);
-      Assert.ToEqual(2, result.Count);
+      testPlayer.PlayerHand.Add(test);
+      testPlayer.PlayerHand.Add(test2);
+      Assert.AreEqual(2, testPlayer.PlayerHand.Count);
     }
   }
 }
