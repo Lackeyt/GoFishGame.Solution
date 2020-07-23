@@ -11,9 +11,41 @@ _Long description._
 ### Specifications
 | | Spec | Input | Output | isComplete |
 | :-------------     | :-------------     | :------------- | :------------- |:------------- |
-|1.|  |  |  | _False_ |
-|2.|  |  |  |_False_  |
-|3.|  |  |  |_False_  |
+|1.|The program can instantiate a Game object  |  |  | _False_ |
+|2.|The Game object contains a turn count number |Turn Number: |7 |_False_  |
+|3.|The game object contains a deck of standard 52 cards |  |  |_False_  |
+|4.|The game object contains a dictionary of player objects |  |  |_False_  |
+|5.|The game object checks if selected card value exists in opponent's hand  |  |  |_False_  |
+|X|If selected card value exists in opponent's hand, remove that card from oppenent hand and add it to player's|||_False_|
+|X|If selected card value does not exist in opponent's hand, draw a card from game deck and add to player's hand, player turn ends|||_False_|
+|6.|The game object has a bool value to know whose turn it is  |  |  |_False_  |
+|7.|The program can instantiate a Player object  |  |  |_False_  |
+|8.|The player object contains a list of cards in hand  |  |  |_False_  |
+|9.|The player object tracks the players score  |  |  |_False_  |
+|10.|The player object is able to draw a card and add it to their hand  |  |  |_False_  |
+|11.| The player object will continue play if no cards are left in the deck| | | _False|
+|12.|The player object can identify matches within it's own hand and remove them |  |  |_False_  |
+|13.| The player object, after identifying a match, will increment its score  |  |  |_False_  |
+|14.|The player object maintains a list of all matches it found in the game  |  |  |_False_  |
+|15.|The player object will add found matches to the match list| | | _False_|
+
+
+Player:
+cards in hand
+score
+drawCard()
+removeMatches() - increment score
+list of matching cards as a single item string
+
+
+
+Game
+turn#
+cards remaining(the deck)
+dictionary of players
+Player Turn (1 or 2)
+checkformatches(int)
+
 
 ## Setup/Installation Requirements
 
