@@ -43,5 +43,17 @@ namespace GoFish.Tests
       Game testGame = new Game();
       Assert.AreEqual(1, testGame.CurrentPlayerTurn);
     }
+
+    [TestMethod]
+    public void DrawCard_AddsCardsToPlayersHand_Int()
+    {
+      Game testGame = new Game();
+      Player player1 = new Player();
+      testGame.AddPlayer(player1);
+
+      Assert.AreEqual(5, player1.PlayerHand.Count);
+    }
+
+
   }
 }

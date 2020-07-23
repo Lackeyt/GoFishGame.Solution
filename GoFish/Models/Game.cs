@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 
 namespace GoFish.Models
 {
@@ -12,7 +13,7 @@ namespace GoFish.Models
     public Game()
     {
       TurnCount = 1;
-      this.PopulateDeck();
+      PopulateDeck();
       CurrentPlayerTurn = 1;
     }
 
@@ -43,14 +44,13 @@ namespace GoFish.Models
     {
       for (int i = numOfCards; i > 0; i--)
       {
-        int deckLocation = random.Next(_deck.Count) -1;
+        Random something = new Random();
+        int deckLocation = something.Next(_deck.Count) -1;
         string[] drawnCard = _deck[deckLocation];
         _players[playerIndex].PlayerHand.Add(drawnCard);
         _deck.RemoveAt(deckLocation);
       }
     }
-
-
 
     public List<Player> GetPlayerList()
     {
