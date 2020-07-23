@@ -23,8 +23,10 @@ _Long description._
 |8.|The game object has a index value to know whose turn it is  |  |  |_True_  |
 |9.|The program can instantiate a Player object  |  |  |_True_  |
 |10.|The player object contains a list of cards in hand  |  |  |_True_  |
+|11.|The player object tracks the players score  |  |  |_True_  |
 
-|11.|The player object tracks the players score  |  |  |_False_  |
+|X.| The player object is dealt a hand of 5 cards upon instantiation | | | _False_|
+
 |12.|The player object is able to draw a card and add it to their hand  |  |  |_False_  |
 |13.| The player object will continue play if no cards are left in the deck| | | _False|
 |14.|The player object can identify matches within it's own hand and remove them |  |  |_False_  |
@@ -36,7 +38,7 @@ _Long description._
 Player:
 cards in hand
 score
-drawCard()
+drawCard(int)
 removeMatches() - increment score
 list of matching cards as a single item string
 

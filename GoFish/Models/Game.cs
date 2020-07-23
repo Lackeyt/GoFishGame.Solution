@@ -36,8 +36,21 @@ namespace GoFish.Models
     public void AddPlayer(Player player)
     {
       _players.Add(player);
-      // Logic for removing 5 cards from the deck and adding to players hand
+      DrawCard(_players.Count-1, 5);
     }
+
+    public void DrawCard(int playerIndex, int numOfCards)
+    {
+      for (int i = numOfCards; i > 0; i--)
+      {
+        int deckLocation = random.Next(_deck.Count) -1;
+        string[] drawnCard = _deck[deckLocation];
+        _players[playerIndex].PlayerHand.Add(drawnCard);
+        _deck.RemoveAt(deckLocation);
+      }
+    }
+
+
 
     public List<Player> GetPlayerList()
     {
